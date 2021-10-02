@@ -60,24 +60,6 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
                 AddNewTask.newInstance().show(getSupportFragmentManager(), AddNewTask.TAG);
             }
         });
-
-//        ToDoModel task = new ToDoModel();
-//        task.setTask("This is a Test Task");
-//        task.setStatus(0);
-//        task.setId(1);
-//
-//        taskList.add(task);
-//        taskList.add(task);
-//        taskList.add(task);
-//        taskList.add(task);
-//        taskList.add(task);
-//        taskList.add(task);
-//        taskList.add(task);
-//        taskList.add(task);
-//        taskList.add(task);
-//        taskList.add(task);
-//
-//        tasksAdapter.setTasks(taskList);
     }
 
     @Override
