@@ -4,7 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Kuliah/Semester 5/Pemrograman Perangkat Bergerak/To Do App/app/src/main/res/drawable/ic_baseline_add.xml" value="0.26145833333333335" />
-        <entry key="..\:/Kuliah/Semester 5/Pemrograman Perangkat Bergerak/To Do App/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Kuliah/Semester 5/Pemrograman Perangkat Bergerak/To Do App/app/src/main/res/drawable/ic_baseline_logout_24.xml" value="0.2755208333333333" />
+        <entry key="..\:/Kuliah/Semester 5/Pemrograman Perangkat Bergerak/To Do App/app/src/main/res/layout/activity_login.xml" value="0.259375" />
+        <entry key="..\:/Kuliah/Semester 5/Pemrograman Perangkat Bergerak/To Do App/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Kuliah/Semester 5/Pemrograman Perangkat Bergerak/To Do App/app/src/main/res/layout/activity_register.xml" value="0.2453125" />
         <entry key="..\:/Kuliah/Semester 5/Pemrograman Perangkat Bergerak/To Do App/app/src/main/res/layout/activity_splash.xml" value="0.264" />
         <entry key="..\:/Kuliah/Semester 5/Pemrograman Perangkat Bergerak/To Do App/app/src/main/res/layout/new_task.xml" value="0.259375" />
         <entry key="..\:/Kuliah/Semester 5/Pemrograman Perangkat Bergerak/To Do App/app/src/main/res/layout/task_layout.xml" value="0.4" />

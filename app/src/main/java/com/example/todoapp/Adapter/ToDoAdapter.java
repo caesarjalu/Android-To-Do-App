@@ -42,20 +42,17 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder> {
         holder.task.setText(item.getTask());
         holder.task.setChecked(toBoolean(item.getStatus()));
 
-        holder.task.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                if (isChecked) {
-                    db.updateStatus(item.getId(), 1);
-                    holder.task.setPaintFlags(holder.task.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-                    holder.task.setTextColor(Color.argb(128, 0, 0, 0));
-                    holder.task.setChecked(true);
-                } else {
-                    db.updateStatus(item.getId(), 0);
-                    holder.task.setPaintFlags(holder.task.getPaintFlags() & ~Paint.STRIKE_THRU_TEXT_FLAG);
-                    holder.task.setTextColor(Color.argb(255, 0, 0, 0));
-                    holder.task.setChecked(false);
-                }
+        holder.task.setOnCheckedChangeListener((compoundButton, isChecked) -> {
+            if (isChecked) {
+                db.updateStatus(item.getId(), 1);
+                holder.task.setPaintFlags(holder.task.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                holder.task.setTextColor(Color.argb(128, 0, 0, 0));
+                holder.task.setChecked(true);
+            } else {
+                db.updateStatus(item.getId(), 0);
+                holder.task.setPaintFlags(holder.task.getPaintFlags() & ~Paint.STRIKE_THRU_TEXT_FLAG);
+                holder.task.setTextColor(Color.argb(255, 0, 0, 0));
+                holder.task.setChecked(false);
             }
         });
     }

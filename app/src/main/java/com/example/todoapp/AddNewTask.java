@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.Preference;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -19,6 +20,7 @@ import androidx.core.content.ContextCompat;
 
 import com.example.todoapp.Model.ToDoModel;
 import com.example.todoapp.Utils.DatabaseHandler;
+import com.example.todoapp.Utils.Preferences;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 public class AddNewTask extends BottomSheetDialogFragment {
@@ -95,10 +97,11 @@ public class AddNewTask extends BottomSheetDialogFragment {
                 if (finalIsUpdate) {
                     db.updateTask(bundle.getInt("id"), text);
                 } else {
+                    int userId = Preferences.getLoggedInUserId(getContext());
                     ToDoModel task = new ToDoModel();
                     task.setTask(text);
                     task.setStatus(0);
-                    db.insertTask(task);
+                    db.insertTask(task, userId);
                 }
                 dismiss();
             }
